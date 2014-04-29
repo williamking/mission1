@@ -1,0 +1,48 @@
+.gallery {
+   background-color: grey;
+}
+
+.ball {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background-color: red;
+}
+.declare {
+	text-align: center;
+}
+#frame {
+  text-align: center;
+  height: 500px;
+  width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+}
+#speedAdd {
+  width: 40px;
+  height: 10px;
+}
+#speedMinus {
+  width: 40px;
+  height: 10px;
+}
+#addParrel {
+  width: 40px;
+  height: 10px;
+}
+#minusParrel {
+  width: 40px;
+  height: 10px;
+}
+#Number {
+  width: 40px;
+  height: 10px;
+}
+.drawing {
+  width: 200px;
+  height: 100px;
+}
+#gravity {
+  width: 40px;
+  height: 10px;
+}

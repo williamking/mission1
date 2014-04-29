@@ -1,0 +1,49 @@
+var balls = new Array();
+
+
+var add = document.getElementById("add");
+var minus = document.getElementById("minus");
+
+var create = function() {
+  var newBall = new Object();
+  newBall.thing = document.createElement("div");
+  newBall.gravity = 9.8;
+  newBall.time = 0;
+  newBall.direction = 1;
+  newBall.speed = 0;
+  newBall.thing.className = "ball";
+  newball = setProperties(newBall.thing);
+  document.body.appendChild(newBall.thing);
+  var theBall = document.body.lastChild;
+  fall(theBall);
+}
+
+var remove = function() {
+  var balls = document.getElementsByClassName("ball");
+  document.body.removeChild(document.body.lastChild);
+}
+
+ // document.getElementsByClassName("speedUp").addEventListener("click", function() {
+
+ // }, false);
+
+ // document.getElementsByClassName("speedDown").addEventListener("click", function() {
+
+ // }, false);
+
+function setProperties(element) {
+  $(element).css("position", "absolute");
+  $(element).css("top", Math.random() * 500 + "px");
+  $(element).css("left", Math.random() * 500 + "px");
+  return element;
+}
+
+function fall(element) {
+  element.speed += 0.1 * element.gravity;
+  document.body.lastchild.style.top += element.speed * 0.5 + "px";
+  setTimeout(fall(element), 5000);
+}
+
+add.addEventListener("click", create, false);
+
+minus.addEventListener("click", remove, false);
